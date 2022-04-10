@@ -1,0 +1,5 @@
+actor: 'UnitTester'
+modules:
+    enabled:
+        - 'Asserts'
+        - '\Sweetchuck\ComposerSuiteHandler\Tests\Helper\Unit'

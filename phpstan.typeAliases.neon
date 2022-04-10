@@ -1,0 +1,85 @@
+parameters:
+    typeAliases:
+        composer-json: '''
+            array{
+                config?: array<string, mixed>,
+                require?: array<string, string>,
+                require-dev?: array<string, string>,
+            }
+        '''
+        suite-definition: '''
+            array{
+                source?: string,
+                name?: string,
+                description?: string,
+                actions?: suite-action-list,
+            }
+        '''
+        suite-action-list: '''
+            array<
+                int,
+                suite-action-def-replace-recursive|suite-action-def-unset|suite-action-def-prepend|suite-action-def-append|suite-action-def-insert-before|suite-action-def-insert-after|suite-action-def-sort-normal
+            >
+        '''
+        suite-action-def-replace-recursive: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-basic,
+            }
+        '''
+        suite-action-def-unset: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-basic,
+            }
+        '''
+        suite-action-def-prepend: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-basic,
+            }
+        '''
+        suite-action-def-append: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-basic,
+            }
+        '''
+        suite-action-def-insert-before: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-insert,
+            }
+        '''
+        suite-action-def-insert-after: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-insert,
+            }
+        '''
+        suite-action-def-sort-normal: '''
+            array{
+                type: "replaceRecursive",
+                config: suite-action-config-sort-normal,
+            }
+        '''
+        suite-action-config-basic: '''
+            array{
+                parents?: array<string>,
+                items?: array<mixed>,
+            }
+        '''
+        suite-action-config-insert: '''
+            array{
+                parents?: array<string>,
+                items?: array<mixed>,
+                placement?: "before"|"after",
+            }
+        '''
+        suite-action-config-sort-normal: '''
+            array{
+                parents?: array<string>,
+                function?: string,
+                params?: array<mixed>,
+            }
+        '''

@@ -20,8 +20,10 @@ class SuiteHandlerTest extends TestBase
     public function casesSuiteFileName(): array
     {
         return [
+            'plain' => ['composer.foo.json', 'composer.json', 'foo'],
             'basic' => ['./composer.foo.json', './composer.json', 'foo'],
             'multi dot' => ['./composer.one.two.json', './composer.json', 'one.two'],
+            'sub-dir' => ['/foo/bar/composer.one.json', '/foo/bar/composer.json', 'one'],
         ];
     }
 

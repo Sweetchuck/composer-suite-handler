@@ -14,6 +14,7 @@ orbs:
 
 executors:
     php_min:
+        resource_class: 'small'
         environment:
             <<: *env_app
             <<: *env_composer
@@ -23,6 +24,7 @@ executors:
                 name: 'main'
                 image: 'cimg/php:7.4'
     php_plus1:
+        resource_class: 'small'
         environment:
             <<: *env_app
             <<: *env_composer
@@ -32,6 +34,7 @@ executors:
                 name: 'main'
                 image: 'cimg/php:8.0'
     php_plus2:
+        resource_class: 'small'
         environment:
             <<: *env_app
             <<: *env_composer
@@ -103,17 +106,10 @@ commands:
                     command: '"$(composer config bin-dir)/robo" --ansi test unit'
             -   codecov/upload:
                     flags: 'unit'
-                    file: './tests/_output/machine/coverage/unit/coverage.xml'
-            -
-                run:
-                    name: 'Codeception - acceptance'
-                    command: '"$(composer config bin-dir)/robo" --ansi test acceptance'
-            -   codecov/upload:
-                    flags: 'unit'
-                    file: './tests/_output/machine/coverage/acceptance/coverage.xml'
+                    file: './tests/_log/machine/coverage/unit/coverage.xml'
             -   store_test_results:
                     name: 'Store unit test results'
-                    path: './tests/_output/machine/junit'
+                    path: './tests/_log/machine/junit'
 
 jobs:
     build:

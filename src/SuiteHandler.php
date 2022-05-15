@@ -66,10 +66,10 @@ class SuiteHandler
     }
 
     /**
-     * @param array<mixed> $composerData
+     * @param array<string, mixed> $composerData
      * @phpstan-param suite-action-list $actions
      *
-     * @return array<mixed>
+     * @return array<string, mixed>
      *
      * @todo The return type is same as $composerData.
      */

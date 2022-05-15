@@ -1,11 +1,11 @@
 includes:
-    - phpstan.baseline.neon
-    - phpstan.typeAliases.neon
-    - phpstan.typeAliasesDev.neon
+    - .phpstan/baseline.neon
+    - .phpstan/typeAliases.neon
+    - .phpstan/typeAliasesDev.neon
 
 parameters:
     bootstrapFiles:
-        - phpstan-bootstrap.php
+        - .phpstan/bootstrap.php
     level: 7
     paths:
         - src/

@@ -102,7 +102,7 @@ class SuiteHandler
     }
 
     /**
-     * @param array<mixed> $composerData
+     * @param array<string, mixed> $composerData
      * @param string $comment
      *
      * @return $this
@@ -560,7 +560,7 @@ class SuiteHandler
     }
 
     /**
-     * @phpstan-param composer-json $composerData
+     * @phpstan-param suite-composer-json $composerData
      *
      * @return $this
      */

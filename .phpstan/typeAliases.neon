@@ -16,10 +16,10 @@ parameters:
             }
         '''
         suite-action-list: '''
-            array<
-                int,
-                suite-action-def-replace-recursive|suite-action-def-unset|suite-action-def-prepend|suite-action-def-append|suite-action-def-insert-before|suite-action-def-insert-after|suite-action-def-sort-normal
-            >
+            array<suite-action-defs>
+        '''
+        suite-action-defs: '''
+            suite-action-def-replace-recursive|suite-action-def-unset|suite-action-def-prepend|suite-action-def-append|suite-action-def-insert-before|suite-action-def-insert-after|suite-action-def-sort-normal
         '''
         suite-action-def-replace-recursive: '''
             array{
@@ -29,37 +29,37 @@ parameters:
         '''
         suite-action-def-unset: '''
             array{
-                type: "replaceRecursive",
+                type: "unset",
                 config: suite-action-config-basic,
             }
         '''
         suite-action-def-prepend: '''
             array{
-                type: "replaceRecursive",
+                type: "prepend",
                 config: suite-action-config-basic,
             }
         '''
         suite-action-def-append: '''
             array{
-                type: "replaceRecursive",
+                type: "append",
                 config: suite-action-config-basic,
             }
         '''
         suite-action-def-insert-before: '''
             array{
-                type: "replaceRecursive",
+                type: "insertBefore",
                 config: suite-action-config-insert,
             }
         '''
         suite-action-def-insert-after: '''
             array{
-                type: "replaceRecursive",
+                type: "insertAfter",
                 config: suite-action-config-insert,
             }
         '''
         suite-action-def-sort-normal: '''
             array{
-                type: "replaceRecursive",
+                type: "sortNormal",
                 config: suite-action-config-sort-normal,
             }
         '''

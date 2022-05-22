@@ -1,8 +1,9 @@
 parameters:
     typeAliases:
-        composer-json: '''
+        suite-composer-json: '''
             array{
                 config?: array<string, mixed>,
+                repositories?: array<string, mixed>,
                 require?: array<string, string>,
                 require-dev?: array<string, string>,
             }
@@ -81,5 +82,21 @@ parameters:
                 parents?: array<string>,
                 function?: string,
                 params?: array<mixed>,
+            }
+        '''
+        suite-package-diff: '''
+            array{
+                repository?: array{
+                    old: null|string,
+                    new: null|string,
+                },
+                moved?: array{
+                    old: string,
+                    new: string,
+                },
+                constraint?: array{
+                    old: null|string,
+                    new: null|string,
+                },
             }
         '''

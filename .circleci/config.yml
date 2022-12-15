@@ -11,6 +11,7 @@ orbs:
     COMPOSER_NO_INTERACTION: '1'
     COMPOSER_MEMORY_LIMIT: '-1'
     COMPOSER_DISABLE_XDEBUG_WARN: '1'
+    COMPOSER_CACHE_DIR: '/home/circleci/.cache/composer'
 
 executors:
     php_min:
@@ -85,7 +86,6 @@ commands:
                     name: 'Composer - cache save'
                     key: 'composer-{{ checksum "./composer.lock" }}-2'
                     paths:
-                        - '~/.composer/cache/'
                         - '~/.cache/composer/'
 
 
@@ -114,13 +114,11 @@ commands:
 jobs:
     build:
         executor: 'php_min'
-        working_directory: '~/repo'
         steps:
             - 'checkout'
             - 'composer_install'
     lint:
         executor: 'php_min'
-        working_directory: '~/repo'
         steps:
             - 'checkout'
             - 'composer_install'

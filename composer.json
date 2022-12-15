@@ -32,8 +32,8 @@
     "require": {
         "php": ">=7.4",
         "ext-json": "*",
-        "symfony/filesystem": "^4.4 || ^5.4",
-        "symfony/finder": "^4.4 || ^5.4"
+        "symfony/filesystem": "^4.4 || ^5.4 || ^6.0",
+        "symfony/finder": "^4.4 || ^5.4 || ^6.0"
     },
     "require-dev": {
         "codeception/codeception": "^4.1",

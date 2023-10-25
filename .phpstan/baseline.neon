@@ -36,11 +36,6 @@ parameters:
 			path: ../RoboFile.php
 
 		-
-			message: "#^Call to function assert\\(\\) with false and literal\\-string&non\\-empty\\-string will always evaluate to false\\.$#"
-			count: 1
-			path: ../src/SuiteHandler.php
-
-		-
 			message: "#^Parameter \\#2 \\$actions of method Sweetchuck\\\\ComposerSuiteHandler\\\\SuiteHandler\\:\\:generate\\(\\) expects array\\<array\\{type\\: 'append'\\|'insertAfter'\\|'insertBefore'\\|'prepend'\\|'replaceRecursive'\\|'sortNormal'\\|'unset', config\\: array\\{parents\\?\\: array\\<string\\>, function\\?\\: string, params\\?\\: array\\}\\|array\\{parents\\?\\: array\\<string\\>, items\\?\\: array, placement\\?\\: 'after'\\|'before'\\}\\}\\>, array\\{array\\{type\\: 'unknown'\\}\\} given\\.$#"
 			count: 1
 			path: ../tests/unit/SuiteHandlerTest.php

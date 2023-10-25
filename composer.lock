@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2febb7bbf05066f346f911c87fef098",
+    "content-hash": "91a81ee2ea4b25bd5bee136ea8711232",
     "packages": [
         {
             "name": "symfony/deprecation-contracts",
@@ -1986,16 +1986,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.11",
+            "version": "1.11.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "8aa62e6ea8b58ffb650e02940e55a788cbc3fe21"
+                "reference": "80ce9a4c30e844dff3df136d6522cef8edac7505"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/8aa62e6ea8b58ffb650e02940e55a788cbc3fe21",
-                "reference": "8aa62e6ea8b58ffb650e02940e55a788cbc3fe21",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/80ce9a4c30e844dff3df136d6522cef8edac7505",
+                "reference": "80ce9a4c30e844dff3df136d6522cef8edac7505",
                 "shasum": ""
             },
             "require": {
@@ -2004,6 +2004,7 @@
             "conflict": {
                 "phpstan/phpstan-shim": "*"
             },
+            "default-branch": true,
             "bin": [
                 "phpstan",
                 "phpstan.phar"
@@ -2044,7 +2045,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-04T19:17:42+00:00"
+            "time": "2023-10-22T11:35:15+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4187,73 +4188,6 @@
             "time": "2022-12-20T21:30:25+00:00"
         },
         {
-            "name": "sweetchuck/utils",
-            "version": "1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Sweetchuck/utils.git",
-                "reference": "524262cd335731bdfa0e42b1c05c96bfaba390e2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Sweetchuck/utils/zipball/524262cd335731bdfa0e42b1c05c96bfaba390e2",
-                "reference": "524262cd335731bdfa0e42b1c05c96bfaba390e2",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": ">=7.4",
-                "symfony/filesystem": "^4.1 || ^5.0 || ^6.0"
-            },
-            "require-dev": {
-                "codeception/codeception": "^4.0",
-                "codeception/module-asserts": "^1.1",
-                "consolidation/robo": "^3.0",
-                "mikey179/vfsstream": "^1.6",
-                "nuvoleweb/robo-config": "3.x-dev",
-                "phpmd/phpmd": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
-                "sweetchuck/git-hooks": "2.x-dev",
-                "sweetchuck/robo-git": "2.x-dev",
-                "sweetchuck/robo-phpcs": "2.x-dev",
-                "sweetchuck/robo-phpmd": "2.x-dev"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Sweetchuck\\Utils\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Andor",
-                    "homepage": "https://github.com/Sweetchuck",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Common utils",
-            "homepage": "https://github.com/Sweetchuck/utils",
-            "keywords": [
-                "comparer",
-                "filesystem",
-                "filter",
-                "iterator",
-                "string formatter",
-                "version number",
-                "walker"
-            ],
-            "support": {
-                "issues": "https://github.com/Sweetchuck/utils/issues",
-                "source": "https://github.com/Sweetchuck/utils"
-            },
-            "time": "2022-12-19T20:44:47+00:00"
-        },
-        {
             "name": "symfony/console",
             "version": "v5.4.22",
             "source": {
@@ -5347,12 +5281,12 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "nuvoleweb/robo-config": 20,
+        "phpstan/phpstan": 20,
         "sweetchuck/git-hooks": 20,
         "sweetchuck/robo-git": 20,
         "sweetchuck/robo-phpcs": 20,
         "sweetchuck/robo-phpmd": 20,
-        "sweetchuck/robo-phpstan": 20,
-        "sweetchuck/utils": 20
+        "sweetchuck/robo-phpstan": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -5361,5 +5295,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

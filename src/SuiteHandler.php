@@ -90,6 +90,7 @@ class SuiteHandler
                     break;
 
                 default:
+                    // @phpstan-ignore-next-line function.impossibleType
                     assert(false, "invalid step type: {$action['type']}");
             }
         }

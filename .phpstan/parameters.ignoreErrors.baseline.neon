@@ -1,0 +1,55 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined method Robo\\Collection\\CollectionBuilder\:\:setAssetNamePrefix\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: '#^Call to an undefined method Robo\\Collection\\CollectionBuilder\:\:setInputFile\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: '#^Call to an undefined method Robo\\Collection\\CollectionBuilder\|Robo\\Task\\Filesystem\\FilesystemStack\:\:mkdir\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: ../RoboFile.php
+
+		-
+			message: '#^Call to an undefined method Robo\\Collection\\CollectionBuilder\|Sweetchuck\\Robo\\Git\\Task\\GitListStagedFilesTask\:\:setPaths\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: '#^Call to an undefined method Robo\\Collection\\CollectionBuilder\|Sweetchuck\\Robo\\Git\\Task\\GitReadStagedFilesTask\:\:setCommandOnly\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: '#^Call to an undefined method Robo\\Collection\\CollectionBuilder\|Sweetchuck\\Robo\\Phpstan\\Task\\AnalyzeTask\:\:setNoProgress\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: '#^Call to an undefined method Sweetchuck\\Robo\\Git\\Task\\GitReadStagedFilesTask\:\:deferTaskConfiguration\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: ../RoboFile.php
+
+		-
+			message: '#^Method Sweetchuck\\ComposerSuiteHandler\\NestedArray\:\:getValue\(\) never assigns null to &\$keyExists so it can be removed from the by\-ref type\.$#'
+			identifier: parameterByRef.unusedType
+			count: 1
+			path: ../src/NestedArray.php
+
+		-
+			message: '#^Method Sweetchuck\\ComposerSuiteHandler\\NestedArray\:\:unsetValue\(\) never assigns null to &\$keyExisted so it can be removed from the by\-ref type\.$#'
+			identifier: parameterByRef.unusedType
+			count: 1
+			path: ../src/NestedArray.php

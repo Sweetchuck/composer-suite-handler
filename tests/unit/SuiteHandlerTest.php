@@ -1028,6 +1028,7 @@ class SuiteHandlerTest extends TestBase
                 $suiteHandler = new SuiteHandler();
                 $suiteHandler->generate(
                     [],
+                    // @phpstan-ignore-next-line
                     [
                         [
                             'type' => 'unknown',

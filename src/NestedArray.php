@@ -76,7 +76,7 @@ class NestedArray
     public static function &getValue(
         array &$array,
         array $parents,
-        ?bool &$keyExists = null
+        ?bool &$keyExists = null,
     ) {
         $ref = &$array;
         foreach ($parents as $parent) {
@@ -169,7 +169,7 @@ class NestedArray
         array &$array,
         array $parents,
         $value,
-        bool $force = false
+        bool $force = false,
     ): void {
         $ref = &$array;
         foreach ($parents as $parent) {
@@ -249,7 +249,7 @@ class NestedArray
     public static function unsetValue(
         array &$array,
         array $parents,
-        ?bool &$keyExisted = null
+        ?bool &$keyExisted = null,
     ): void {
         $unsetKey = array_pop($parents);
         $ref = &static::getValue($array, $parents, $keyExisted);
@@ -370,7 +370,7 @@ class NestedArray
      */
     public static function mergeDeepArray(
         array $arrays,
-        bool $preserveIntegerKeys = false
+        bool $preserveIntegerKeys = false,
     ) {
         $result = [];
         foreach ($arrays as $array) {

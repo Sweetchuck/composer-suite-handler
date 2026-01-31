@@ -41,15 +41,3 @@ parameters:
 			identifier: method.notFound
 			count: 1
 			path: ../RoboFile.php
-
-		-
-			message: '#^Method Sweetchuck\\ComposerSuiteHandler\\NestedArray\:\:getValue\(\) never assigns null to &\$keyExists so it can be removed from the by\-ref type\.$#'
-			identifier: parameterByRef.unusedType
-			count: 1
-			path: ../src/NestedArray.php
-
-		-
-			message: '#^Method Sweetchuck\\ComposerSuiteHandler\\NestedArray\:\:unsetValue\(\) never assigns null to &\$keyExisted so it can be removed from the by\-ref type\.$#'
-			identifier: parameterByRef.unusedType
-			count: 1
-			path: ../src/NestedArray.php

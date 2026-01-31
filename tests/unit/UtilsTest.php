@@ -89,6 +89,7 @@ class UtilsTest extends TestBase
             '}',
         ]);
 
+        // @phpstan-ignore-next-line
         $this->tester->assertIsArray(Utils::decode($string));
     }
 }
